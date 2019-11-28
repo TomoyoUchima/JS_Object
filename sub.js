@@ -1,32 +1,18 @@
 'use strict'
+{
 
-class Player {
-    constructor(name, score) {
-        this.name = name,
-        this.score = score
-    }
-    showInfo() {
-        console.log(`name: ${this.name} score: ${this.score}`);
-    }
+  // let x = 1;
+  // let y = x;
+  // x = 5;
+  // console.log(x);
+  
+  let x = [1, 2];
+  let y = x;  //xをコピーするのではなく、「xを参照する」という仕組みになる。
+  x[0] = 5;
+  console.log(x); //[5, 2]
+  console.log(y); //[5, 2]
+
+  // ※オブジェクトでは、変数がコピーされると、値そのものではなくてその値への参照がコピーされる。
+
+
 }
-
-const taguchi = new Player('taguchi', 32);
-console.log(taguchi);
-
-taguchi.showInfo();
-
-class SoccerPlayer extends Player {
-    constructor(name, score, number) {
-        super(name, score);
-        this.number = number;
-    }
-    kick() {
-        console.log('Goooool!');
-    }
-}
-
-const tsubasa = new SoccerPlayer('tsubasa', 99, 10);
-
-tsubasa.kick();
-console.log(tsubasa.number);
-tsubasa.showInfo();
