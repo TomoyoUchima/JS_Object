@@ -1,26 +1,19 @@
 'use strict'
 {
 
-const a = [1, 2, 5, 10];
+const o = {
+  a: 1,
+  b: 2,
+}
 
-// const b = []
-// a.forEach(item => {
-// b.push(item * 2);  
-// });
-// console.log(b);
+//指定したオブジェクトの、キーの一覧や値の一覧、もしくはすべてを配列として取得したい、という場合に使えるメソッド。
 
+// console.log(Object.keys(o)); //キーの一覧を配列で取得 → ['a', 'b']
+// console.log(Object.values(o)); //値の一覧を配列で取得 → ['1', '2']
+// console.log(Object.entries(o)); //全体を配列で取得 → [['a', '1'], ['b', 2]]
 
-//map() メソッドは、与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる新しい配列を生成します。
-
-// const b = a.map(item => {
-//   return item * 2;
-// });
-
-// const b = a.map(item => item * 2); //return1行のためこの書き方でok。
-
-//filter() メソッドは、引数として与えられたテスト関数を各配列要素に対して実行し、それに合格したすべての配列要素からなる新しい配列を生成します。
-const b = a.filter(item => item % 2 === 0);
-
-console.log(b);
+Object.keys(o).forEach(key => {
+  console.log(`${key}: ${o[key]}`)
+});
 
 };
