@@ -1,20 +1,26 @@
 'use strict'
 {
 
-const a = [1, 5, 10, 100];
+const a = [1, 2, 5, 10];
 
-// for (let i = 0; i < a.length; i++) {
-//   console.log(a[i]);
-// }
-
+// const b = []
 // a.forEach(item => {
-// console.log(item);
+// b.push(item * 2);  
+// });
+// console.log(b);
+
+
+//map() メソッドは、与えられた関数を配列のすべての要素に対して呼び出し、その結果からなる新しい配列を生成します。
+
+// const b = a.map(item => {
+//   return item * 2;
 // });
 
-a.forEach((item, index) => {
-  console.log(`${index}:${item}`);
-});
+// const b = a.map(item => item * 2); //return1行のためこの書き方でok。
 
+//filter() メソッドは、引数として与えられたテスト関数を各配列要素に対して実行し、それに合格したすべての配列要素からなる新しい配列を生成します。
+const b = a.filter(item => item % 2 === 0);
 
+console.log(b);
 
-}
+};
