@@ -1,18 +1,15 @@
 'use strict'
 {
 
-const d = new Date();
-// console.log(d); //Fri Dec 06 2019 13:49:21 GMT+0900 (日本標準時)
+// const d = new Date(2018, 11); // 2018/12/01 00:00:00
+// d.setHours(10, 20, 30); // 2018/12/01 10:20:30
+// d.setDate(32); // 2018/12/01 10:20:30
+// d.setDate(d.getDate() + 3); // 2018/12/01 10:20:30
+// console.log(d);
 
-console.log(d.getFullYear());
-console.log(d.getMonth()); // 1月 - 12月 → 0 -11
-console.log(d.getDate());
-console.log(d.getDay()); // 日曜 - 土曜 → 0 - 6
-console.log(d.getHours());
-console.log(d.getMinutes());
-console.log(d.getSeconds());
-console.log(d.getMilliseconds());
+const d1 = new Date(2018, 11, 1);
+const d2 = new Date(2018, 11, 10);
+console.log(d2 - d1);
+console.log((d2 - d1) / (24 * 60 * 60 * 1000)) //24 時間、 60 分、 60 秒、 1000 ミリ秒としてあげると、日単位になる。
 
-console.log(d.getTime()); //UTC 1970/01/01 00:00:00
-// → 1970/01/01 00:00:00 の基準日から現在日時までの経過ミリ秒が表示される
 };
